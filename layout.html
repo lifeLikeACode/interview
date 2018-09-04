@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout</title>
+</head>
+<style type="text/css">
+	html *{
+		padding: 0;margin: 0;
+	}
+	.layout{
+		margin: 100px 0;
+		border-top:1px solid #eeeeee;
+		
+	}
+
+	.float .left-right-center div{
+		height:100px;
+		
+	}
+	.float .left-right-center .left {
+		width: 300px;
+		background: red;
+		float: left;
+	}
+	.float .left-right-center .right{
+		width: 300px;
+		background: yellow;
+		float: right;
+	}
+	.float .left-right-center .center{
+		background: #00ffb8;
+		/*float: left;*/
+	}
+
+	.absolute .left-right-center div{
+		height:100px;
+		
+	}
+	.absolute .left-right-center .left {
+		width: 300px;
+		background: red;
+		position: absolute;
+		left: 0
+	}
+	.absolute .left-right-center .right{
+		width: 300px;
+		background: yellow;
+		position: absolute;
+		right: 0
+	}
+	.absolute .left-right-center .center{
+		position: absolute;
+		background: #00ffb8;
+		left: 300px;
+		right: 300px;
+		/*float: left;*/
+	}
+
+	/*flexbox*/
+
+	.flexbox .left-right-center div{
+		height:100px;
+		
+	}
+	.flexbox  .left-right-center{
+		display: flex;
+		justify-content: space-between;
+	}
+	.flexbox .left-right-center .left {
+		width: 300px;
+		background: red;
+		
+	}
+	.flexbox .left-right-center .right{
+		width: 300px;
+		background: yellow;
+		
+	}
+	.flexbox .left-right-center .center{
+		flex:1;
+		background: #00ffb8;
+	}
+	/*table-cell*/
+	.table-cell .left-right-center{
+		display: table;
+		width: 100%;
+	}
+	.table-cell .left-right-center div{
+		height:100px;
+		display: table-cell;
+		/*&.h1_text{
+			background: red;
+			font-size: 35px;
+		}*/
+	}
+
+	.table-cell .left-right-center .left {
+		width: 300px;
+		background: red;
+		
+	}
+	.table-cell .left-right-center .right{
+		width: 300px;
+		background: yellow;
+		
+	}
+	.table-cell .left-right-center .center{
+		background: #00ffb8;
+	}
+	/*grid*/
+	.layout.grid .left-right-center{
+		display: grid;
+		grid-template-columns: 300px auto 300px;
+	}
+	
+	.layout.grid .left-right-center .left{
+		background:red;
+	}
+	
+	.layout.grid .left-right-center .center{
+		background: #00ffb8;
+	}
+
+	.layout.grid .left-right-center .right{
+		background:yellow;
+	}
+
+</style>
+<body>
+	<section class="layout float">
+		<article class="left-right-center">
+			<div class="left">左</div>
+			<div class="right">右</div>
+			<div class="center">
+				<h1>浮动解决方案</h1>
+				1.这是三栏布局中间部分
+				2.这是三栏布局中间部分
+			</div>
+		</article>
+	</section>
+
+	<section class="layout absolute">
+		<article class="left-right-center">
+			<div class="left">左</div>
+			<div class="right">右</div>
+			<div class="center">
+				<h1>绝对定位解决方案</h1>
+				1.这是三栏布局中间部分
+				2.这是三栏布局中间部分
+			</div>
+		</article>
+	</section>
+
+	<section class="layout flexbox">
+		<article class="left-right-center">
+			<div class="left">左</div>
+			<div class="center">
+				<h1>flexbox解决方案</h1>
+				1.这是三栏布局中间部分
+				2.这是三栏布局中间部分
+			</div>
+			<div class="right">右</div>
+		</article>
+	</section>
+	
+	<section class="layout table-cell">
+		<article class="left-right-center">
+			<div class="left">左</div>
+			
+			<div class="center">
+				<h1 class="h1_text">table-cell解决方案</h1>
+				1.这是三栏布局中间部分
+				2.这是三栏布局中间部分
+			</div>
+			<div class="right">右</div>
+		</article>
+	</section>
+
+	<section class="layout grid">
+		<article class="left-right-center">
+			<div class="left">左</div>
+			
+			<div class="center">
+				<h1>grid解决方案</h1>
+				1.这是三栏布局中间部分
+				2.这是三栏布局中间部分
+			</div>
+			<div class="right">右</div>
+		</article>
+	</section>
+</body>
+</html>

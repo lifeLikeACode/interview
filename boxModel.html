@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css box model</title>
+</head>
+<body>
+	<div>
+		css 盒模型
+
+		标准盒模型  border + padding + (width = content)  标准盒模型的宽高不包含 border  padding width 
+		IE盒模型    border + padding + width = content    IE盒模型的宽高包含border  padding width 
+		
+		非IE浏览器默认box-sizing: content-box
+
+
+		开发时候处理兼容性问题可以将box-sizing设置为 border-box
+
+	</div>
+	<div>
+		获取css样式方法
+
+		1. dom.offsetWidth
+		2. dom.getBoudingRect
+		3. dom.getcomputedstyle
+
+
+
+	</div>
+</body>
+</html>
